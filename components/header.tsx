@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Activity, Menu, X, ChevronDown } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -16,9 +17,10 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <div className="relative">
-              <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/30">
-                <Activity className="w-6 h-6 text-white" />
-              </div>
+                <Avatar>
+                    <AvatarImage src="/mubas-logo.png" className={"object-cover"} />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full"></div>
             </div>
             <div>

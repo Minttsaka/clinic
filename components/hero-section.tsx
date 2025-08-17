@@ -68,7 +68,7 @@ export default function HeroSection() {
               {/* Doctor image */}
               <div className="relative z-10">
                 <Image
-                  src="/placeholder.svg?height=500&width=400&text=Professional+Doctor"
+                  src="/doctor.png?height=500&width=400&text=Professional+Doctor"
                   alt="Professional doctor"
                   width={400}
                   height={500}
