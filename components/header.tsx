@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import Link from "next/link"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -67,9 +68,11 @@ export default function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-3">
-            <Button variant="ghost" className="text-white hover:bg-white/20 text-sm px-4 py-2 h-auto">
-              Sign In
-            </Button>
+              <Link href={"/login"}>
+                <Button variant="ghost" className="text-white hover:bg-white/20 text-sm px-4 py-2 h-auto">
+                  Sign In
+                </Button>
+              </Link>
             <Button className="bg-white text-cyan-600 hover:bg-gray-100 text-sm px-6 py-2 h-auto font-semibold rounded-full shadow-lg">
               Start Free Trial
             </Button>
